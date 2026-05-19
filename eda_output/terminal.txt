@@ -1,0 +1,165 @@
+(.venv) PS C:\sohel\mediaEval\media_code_NEW> python eda.py --csv devset_videolist_GT.csv --stt devset-stt
+
+════════════════════════════════════════════════════════════
+  DATASET OVERVIEW
+════════════════════════════════════════════════════════════
+  Rows            : 339
+  Columns         : ['id', 'url', 'channelName', 'channelUrl', 'categoryId', 'categoryName', 'title', 'description', 'thumbnailUrl', 'tags', 'durationString', 'durationSeconds', 'viewsCount', 'likesCount', 'dislikesCount', 'favouritesCount', 'commentsCount', 'engagementsCount', 'engagementRate', 'video_id', 'nb_annotations', 'memorability_score', 'brand_memorability']
+
+  Nulls per column:
+id                      0
+url                     0
+channelName             0
+channelUrl              0
+categoryId              0
+categoryName            0
+title                   0
+description            10
+thumbnailUrl            0
+tags                  159
+durationString          0
+durationSeconds         0
+viewsCount              0
+likesCount              0
+dislikesCount           0
+favouritesCount         0
+commentsCount           0
+engagementsCount        0
+engagementRate          0
+video_id                0
+nb_annotations          0
+memorability_score      0
+brand_memorability      0
+
+  dtypes:
+id                        str
+url                       str
+channelName               str
+channelUrl                str
+categoryId              int64
+categoryName              str
+title                     str
+description               str
+thumbnailUrl              str
+tags                      str
+durationString            str
+durationSeconds         int64
+viewsCount              int64
+likesCount              int64
+dislikesCount           int64
+favouritesCount         int64
+commentsCount           int64
+engagementsCount        int64
+engagementRate        float64
+video_id                int64
+nb_annotations          int64
+memorability_score    float64
+brand_memorability    float64
+
+════════════════════════════════════════════════════════════
+  TARGET STATISTICS
+════════════════════════════════════════════════════════════
+
+  memorability_score
+    mean=0.7267  std=0.1412  min=0.1875  max=1.0000
+    skewness=-0.881  kurtosis=1.088
+    25th pct=0.6471  75th pct=0.8284
+
+  brand_memorability
+    mean=0.5447  std=0.1492  min=0.0833  max=0.8667
+    skewness=-0.313  kurtosis=-0.178
+    25th pct=0.4444  75th pct=0.6429
+
+  Spearman ρ(video, brand) = 0.6780  p = 5.69e-47
+
+════════════════════════════════════════════════════════════
+  CHANNEL STATISTICS (sorted by video memorability)
+════════════════════════════════════════════════════════════
+                                              mem_mean  mem_std  mem_n  brand_mean  brand_std  brand_n
+channelName                                                                                           
+M&G Investments                                  0.889      NaN      1       0.611        NaN        1
+State Street Global Advisors                     0.875      NaN      1       0.625        NaN        1
+Capital Group                                    0.812      NaN      1       0.438        NaN        1
+jpmorgan                                         0.783    0.094     31       0.635      0.107       31
+Aegon                                            0.779    0.153      3       0.598      0.113        3
+Goldman Sachs                                    0.773    0.116     79       0.574      0.144       79
+Baillie Gifford UK                               0.767    0.029      3       0.574      0.047        3
+BNP Paribas Leasing Solutions UK                 0.751    0.020      2       0.639      0.011        2
+AXA Investment Managers                          0.748    0.262      2       0.454      0.112        2
+T. Rowe Price                                    0.748    0.132      4       0.561      0.238        4
+Legal & General                                  0.746    0.072     10       0.567      0.135       10
+Vanguard                                         0.746    0.136     17       0.577      0.159       17
+Credit Suisse                                    0.742    0.156     17       0.504      0.143       17
+Aon Assessment Solutions                         0.742    0.078      4       0.525      0.038        4
+Columbia Threadneedle Investments EMEA APAC      0.741    0.231      3       0.567      0.058        3
+BMO Global Asset Management - EMEA               0.723    0.137      8       0.570      0.145        8
+HSBC UK                                          0.720    0.139     12       0.577      0.137       12
+Invesco                                          0.719    0.103      8       0.487      0.082        8
+Aviva                                            0.716    0.170      5       0.500      0.176        5
+Baillie Gifford                                  0.714      NaN      1       0.643        NaN        1
+Life at Capital Group                            0.713    0.134      4       0.444      0.165        4
+Natixis Investment Managers US                   0.712    0.079      3       0.425      0.149        3
+Santander Asset Management UK                    0.712    0.140      3       0.414      0.222        3
+Janus Henderson Investment Trusts                0.709    0.071     11       0.558      0.124       11
+Legal & General Investment Management - LGIM     0.706    0.106     14       0.491      0.150       14
+UBS                                              0.695    0.150     37       0.519      0.147       37
+Aon                                              0.693    0.079     18       0.549      0.110       18
+BNP Paribas                                      0.651    0.239      6       0.475      0.195        6
+Allianz                                          0.639    0.214     14       0.505      0.200       14
+Amundi                                           0.613    0.166      7       0.388      0.185        7
+Blackstone                                       0.535    0.262      7       0.465      0.220        7
+Aviva UK                                         0.488    0.199      3       0.450      0.185        3
+
+════════════════════════════════════════════════════════════
+  SPEARMAN CORRELATIONS — METADATA vs TARGETS
+════════════════════════════════════════════════════════════
+  log_views                  ρ_video=+0.136 (p=1.21e-02)   ρ_brand=+0.080 (p=1.42e-01)
+  log_likes                  ρ_video=-0.120 (p=2.69e-02)   ρ_brand=-0.097 (p=7.33e-02)
+  log_comments               ρ_video=-0.027 (p=6.15e-01)   ρ_brand=+0.000 (p=9.99e-01)
+  engagementRate             ρ_video=-0.130 (p=1.66e-02)   ρ_brand=-0.114 (p=3.58e-02)
+  log_duration               ρ_video=-0.023 (p=6.76e-01)   ρ_brand=+0.009 (p=8.68e-01)
+  nb_annotations             ρ_video=-0.066 (p=2.25e-01)   ρ_brand=-0.123 (p=2.37e-02)
+  durationSeconds            ρ_video=-0.023 (p=6.76e-01)   ρ_brand=+0.009 (p=8.68e-01)
+
+════════════════════════════════════════════════════════════
+  DURATION ANALYSIS
+════════════════════════════════════════════════════════════
+  Videos > 60s  : 85.8%
+  Median dur    : 211s  (3.5 min)
+  Max dur       : 5652s  (94.2 min)
+  Min dur       : 7s
+
+════════════════════════════════════════════════════════════
+  ANNOTATION COUNT ANALYSIS
+════════════════════════════════════════════════════════════
+  nb_annotations — min=12  max=51  mean=17.7  std=4.4
+
+════════════════════════════════════════════════════════════
+  CATEGORY BREAKDOWN
+════════════════════════════════════════════════════════════
+                      memorability_score       brand_memorability      
+                                    mean count               mean count
+categoryName                                                           
+Education                       0.719808    85           0.528631    85
+Entertainment                   0.750614     9           0.480311     9
+Howto & Style                   0.667005     7           0.499789     7
+Music                           0.937500     1           0.750000     1
+News & Politics                 0.731812   178           0.555422   178
+Nonprofits & Activism           0.623444     6           0.483860     6
+People & Blogs                  0.715292    35           0.533096    35
+Science & Technology            0.769022    15           0.586632    15
+Sports                          0.739029     3           0.643791     3
+
+════════════════════════════════════════════════════════════
+  STT TRANSCRIPT ANALYSIS
+════════════════════════════════════════════════════════════
+  Missing transcript files : 0
+  Empty transcripts        : 3  — ids: ['RvhqtG6CAEY', 'NgK1BFAfzAM', 'T-3f5QOcAUw']
+  Word count — min=0  max=15613  mean=1529  median=574
+
+  ρ(word_count, video_mem) = -0.015  p=0.778
+  ρ(word_count, brand_mem) = 0.007  p=0.892
+
+════════════════════════════════════════════════════════════
+  EDA complete. Figures saved to: C:\sohel\mediaEval\media_code_NEW\eda_output
+════════════════════════════════════════════════════════════
