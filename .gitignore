@@ -2,6 +2,6 @@ videos/
 devset-stt/
 
 # for now ignoring thumbnails folder
-thumbnails/*/
+# thumbnails/*/
 
 # python eda.py --csv devset_videolist_GT.csv --stt devset-stt
