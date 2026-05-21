@@ -1,0 +1,12 @@
+>> python tune_and_predict.py --train-csv devset_videolist_GT.csv --feat features/ --out  predictions/
+
+Tuning for memorability_score ...
+  Best CV ρ = 0.2170  model = Pipeline(steps=[('sc', StandardScaler()), ('m', Ridge(alpha=500))])
+
+Tuning for brand_memorability ...
+  Best CV ρ = 0.2435  model = Pipeline(steps=[('sc', StandardScaler()), ('m', SVR(C=0.1))])
+
+No test CSV provided — skipping test predictions.
+Run with --test-csv testset_videolist.csv when ready.
+
+Final CV summary: {'memorability_score': np.float64(0.2170204623437424), 'brand_memorability': np.float64(0.24347544201732357)}

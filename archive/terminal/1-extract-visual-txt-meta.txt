@@ -1,0 +1,20 @@
+>> python extract_visual.py --csv devset_videolist_GT.csv --frames frames/ --out features/
+
+Using device: cuda
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 339/339 [12:24<00:00,  2.20s/it]
+Visual feature matrix shape: (339, 3072)
+Saved to features/
+
+
+
+
+>>  python extract_text_meta.py --csv devset_videolist_GT.csv --out features/
+
+Using device: cuda
+Encoding text with CLIP...
+Text feature matrix shape: (339, 768)
+Meta feature matrix shape: (339, 18)
+Features: ['log_views', 'log_likes', 'log_dislikes', 'log_comments', 'log_engagements', 'engagement_rate', 'log_duration', 'is_long', 'nb_annotations', 'channel_mem_enc', 'channel_brand_enc', 'cat_News_n_Politics', 'cat_Education', 'cat_People_n_Blogs', 'cat_Science_n_Technology', 'cat_Entertainment', 'cat_Howto_n_Style', 'cat_Nonprofits_n_Activism']
+Saved to features/
+ 

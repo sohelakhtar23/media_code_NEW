@@ -23,3 +23,5 @@ Each downloaded thumbnail image size is 480 x 360.
 To get the thumbnails of Unavailable videos, For now I used `Videos Dataset` provided by Rukiye hoca, the videos aren't provided by the Organizers yet but for now I'm using them.
 
 Each videos are of different length. Right now I just selected from myself a particular frame as a thumbnail i.e. 5th second for now. That can be changed later on as wished. And all the Frames for the unavailable videos, which are generated using the actual videos are of size 480 * 360. 
+
+For video `ZwkM_C_y_Pc`, duration = 7s

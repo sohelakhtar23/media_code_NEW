@@ -1,0 +1,74 @@
+>>  python extract_targeted.py  --csv  devset_videolist_GT.csv --frames frames/ --stt  devset-stt/ --out    features/
+Using device: cuda
+zero-shot visual: 100%|██████████████████████████████████████████████████████████████████████████████████████████████| 339/339 [16:48<00:00,  2.97s/it]
+Zero-shot feature shape: (339, 27)
+STT semantic feature shape: (339, 768)
+Saved to features/
+
+
+>> python train2.py --csv devset_videolist_GT.csv --feat features/ --out predictions/
+
+════════════════════════════════════════════════════════════
+  TARGET: memorability_score
+════════════════════════════════════════════════════════════
+  meta_only                  ridge   ρ=0.1673
+  meta_only                  svr     ρ=0.0151
+  meta_only                  xgb     ρ=0.0964
+  zeroshot_only              ridge   ρ=-0.0147
+  zeroshot_only              svr     ρ=-0.0240
+  zeroshot_only              xgb     ρ=0.0849
+  stt_only                   ridge   ρ=-0.0099
+  stt_only                   svr     ρ=-0.0689
+  stt_only                   xgb     ρ=-0.0446
+  meta+zeroshot              ridge   ρ=0.1578
+  meta+zeroshot              svr     ρ=0.0225
+  meta+zeroshot              xgb     ρ=0.2529
+  meta+stt                   ridge   ρ=0.0291
+  meta+stt                   svr     ρ=-0.0211
+  meta+stt                   xgb     ρ=0.0060
+  zeroshot+stt               ridge   ρ=0.0093
+  zeroshot+stt               svr     ρ=-0.0586
+  zeroshot+stt               xgb     ρ=0.0188
+  meta+zeroshot+stt          ridge   ρ=0.0342
+  meta+zeroshot+stt          svr     ρ=-0.0084
+  meta+zeroshot+stt          xgb     ρ=0.0496
+  all                        ridge   ρ=0.0818
+  all                        svr     ρ=0.1060
+  all                        xgb     ρ=0.2048
+
+  ★ Best: combo=meta+zeroshot  model=xgb  ρ=0.2529
+
+════════════════════════════════════════════════════════════
+  TARGET: brand_memorability
+════════════════════════════════════════════════════════════
+  meta_only                  ridge   ρ=0.1772
+  meta_only                  svr     ρ=0.1253
+  meta_only                  xgb     ρ=0.1588
+  zeroshot_only              ridge   ρ=-0.0229
+  zeroshot_only              svr     ρ=-0.0931
+  zeroshot_only              xgb     ρ=-0.1193
+  stt_only                   ridge   ρ=0.0199
+  stt_only                   svr     ρ=0.0423
+  stt_only                   xgb     ρ=0.0156
+  meta+zeroshot              ridge   ρ=0.1668
+  meta+zeroshot              svr     ρ=0.0624
+  meta+zeroshot              xgb     ρ=0.0773
+  meta+stt                   ridge   ρ=0.0854
+  meta+stt                   svr     ρ=0.0982
+  meta+stt                   xgb     ρ=0.1457
+  zeroshot+stt               ridge   ρ=0.0514
+  zeroshot+stt               svr     ρ=0.0379
+  zeroshot+stt               xgb     ρ=0.0174
+  meta+zeroshot+stt          ridge   ρ=0.0908
+  meta+zeroshot+stt          svr     ρ=0.0881
+  meta+zeroshot+stt          xgb     ρ=0.0838
+  all                        ridge   ρ=0.0615
+  all                        svr     ρ=0.0424
+  all                        xgb     ρ=0.0987
+
+  ★ Best: combo=meta_only  model=ridge  ρ=0.1772
+
+════════════════════════════════════════════════════════════
+  FINAL PREDICTIONS
+════════════════════════════════════════════════════════════
+  Saved to predictions/train_predictions.csv

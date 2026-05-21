@@ -1,0 +1,30 @@
+>> python train_llm.py --csv  devset_videolist_GT.csv --feat features/ --llm  llm_scalar_cache.json --out  predictions/
+
+Spearman ρ — LLM scalars vs targets:
+  dimension                  ρ_video   ρ_brand
+  brand_prominence           -0.073     +0.058
+  emotional_valence          +0.139     +0.063
+  narrative_arc              +0.029     +0.050
+  call_to_action             +0.008     +0.061
+  information_density        -0.112     +0.029
+  novelty_surprise           +0.080     +0.043
+  visual_dynamism            +0.040     +0.026
+  brand_specificity          -0.103     +0.022
+
+═══════════════════════════════════════════════════════
+  TARGET: memorability_score
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.2145
+  llm_only              best CV ρ = 0.0909
+  meta+face             best CV ρ = 0.2170
+  meta+llm              best CV ρ = 0.2615
+  meta+face+llm         best CV ρ = 0.2574
+
+═══════════════════════════════════════════════════════
+  TARGET: brand_memorability
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.2447
+  llm_only              best CV ρ = 0.0027
+  meta+face             best CV ρ = 0.2435
+  meta+llm              best CV ρ = 0.2578
+  meta+face+llm         best CV ρ = 0.2337
