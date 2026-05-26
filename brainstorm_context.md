@@ -9,7 +9,8 @@ We are participating in **MediaEval 2026 — Predicting Commercial Memorability,
 
 Both scores are continuous values in [0, 1], derived from recall experiments
 with human annotators. The task requires jointly predicting both scores for
-85 unseen test videos, trained on 339 labelled videos.
+85 unseen test videos, trained on 339 labelled videos.  
+Evaluation metric: **Spearman ρ**, independently for each target.
 
 ---
 
@@ -70,5 +71,66 @@ Columns available for each video:
 ---
 
 
-# My pc configuration:
-I have a NVIDIA RTX 4000 Ada Generation GPU (20 GB VRAM)
+## My pc configuration:  
+- I have a NVIDIA RTX 4000 Ada Generation GPU (20 GB VRAM)  
+---
+
+
+## Key Dataset Facts
+
+- All videos are financial institution content (Goldman Sachs, JPMorgan, UBS, etc.) — visually and semantically homogeneous
+- Annotators watched **at most 60 seconds** of each video regardless of actual duration
+- 32 training channels, 9 test channels — **zero channel overlap**
+
+---
+
+## Features Extracted
+
+| Feature | Dim | Notes |
+|---|---|---|
+| Frame stats (OpenCV) | 10d | brightness, saturation, colorfulness, face rate, motion, shot cuts. Only `face_rate` has signal (raw ρ=0.115) |
+| Metadata | 11d | log engagement signals + channel target encoding. Channel encoding dominates all signal |
+| LLM scalars (GPT-4o-mini) | 8d | 8 memorability dimensions per video, saved in `llm_scalar_cache_v2.json` |
+
+**LLM dimensions (v2):** `emotional_valence`, `human_presence`, `message_simplicity`, `novelty_surprise`, `narrative_arc`, `brand_prominence`, `repetition_hooks`, `direct_memorability`
+
+---
+
+## What We Tried and Failed
+
+| Approach | Result |
+|---|---|
+| CLIP ViT-L/14 visual embeddings (first 60 frames, mean/std/first/last pooling) | ρ ≈ 0.00 |
+| CLIP zero-shot memorability prompts (cosine sim against prompt set) | ρ ≈ 0.00 |
+| CLIP text embeddings (title + description) | ρ ≈ 0.00 |
+| STT transcript semantic embeddings | ρ ≈ 0.00 |
+| Frame stats — all except face_rate | ρ ≈ 0.00 |
+| Channel-agnostic model (no channel encoding) | collapses to ρ ≈ 0.07 |
+| Cross-target stacking | **Invalid for test** — zero channel overlap means brand predictions are near-constant, adding no signal |
+
+---
+
+## Best Results So Far
+
+CV strategy: **Channel-stratified GroupKFold** — greedy bin-packing by channel size, Goldman Sachs (23% of data, 79 videos) gets its own dedicated fold, fully deterministic (no random seed).
+
+| Target | Best feature combo | CV ρ |
+|---|---|---|
+| `memorability_score` | `meta + face_rate + LLM_v2` | **0.2729** |
+| `brand_memorability` | `meta + face_rate` | **0.2199** |
+
+---
+
+## Scripts in Repo
+
+| Script | Purpose |
+|---|---|
+| `extract_features.py` | Extracts visual (CLIP), text (CLIP), metadata, and frame stats features |
+| `llm_score_cache.py` | Calls GPT-4o-mini to generate LLM scalar scores, saves to `llm_scalar_cache_v2.json` |
+| `train_with_llm_score.py` | Current best training script — tunes Ridge/SVR/XGBoost across feature combos with channel-stratified CV |
+| `eda.py` | Exploratory data analysis — score distributions, channel stats, metadata correlations |
+
+
+
+
+

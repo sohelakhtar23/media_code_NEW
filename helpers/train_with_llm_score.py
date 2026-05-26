@@ -2,11 +2,9 @@
 Integrate LLM semantic scalars into training.
 
 Usage:
-    python train_llm.py \
-        --csv    devset_videolist_GT.csv \
-        --feat   features/ \
-        --llm    llm_scalar_cache.json \
-        --out    predictions/
+    python train_with_llm_score2.py 
+    --csv  devset_videolist_GT.csv --feat features/ 
+    --llm  llm_scalar_cache_v2.json
 """
 
 import argparse
@@ -28,9 +26,8 @@ from xgboost import XGBRegressor
 warnings.filterwarnings("ignore")
 
 LLM_KEYS = [
-    "brand_prominence", "emotional_valence", "narrative_arc",
-    "call_to_action", "information_density", "novelty_surprise",
-    "visual_dynamism", "brand_specificity",
+    "emotional_valence", "human_presence", "message_simplicity", "novelty_surprise",
+    "narrative_arc", "brand_prominence", "repetition_hooks", "direct_memorability",
 ]
 
 def get_args():
@@ -75,14 +72,45 @@ def build_meta(df):
     return feat.values.astype(np.float32)
 
 
-def channel_kfold(df, n_splits=5, seed=42):
-    channels  = df["channelName"].values
-    unique_ch = np.unique(channels)
-    rng       = np.random.default_rng(seed)
-    rng.shuffle(unique_ch)
-    ch_folds  = np.array_split(unique_ch, n_splits)
-    idx       = np.arange(len(df))
-    return [(idx[~np.isin(channels, cf)], idx[np.isin(channels, cf)]) for cf in ch_folds]
+# def channel_kfold(df, n_splits=5, seed=42):
+#     channels  = df["channelName"].values
+#     unique_ch = np.unique(channels)
+#     rng       = np.random.default_rng(seed)
+#     rng.shuffle(unique_ch)
+#     ch_folds  = np.array_split(unique_ch, n_splits)
+#     idx       = np.arange(len(df))
+#     return [(idx[~np.isin(channels, cf)], idx[np.isin(channels, cf)]) for cf in ch_folds]
+
+def channel_stratified_kfold(df, n_splits=5):
+    """
+    Sort channels by size descending. Assign channels to folds greedily
+    to keep fold sizes balanced (like a bin-packing approximation).
+    Goldman Sachs (largest) always goes into its own fold first.
+    """
+    ch_sizes = df["channelName"].value_counts()  # sorted descending
+    channels = ch_sizes.index.tolist()
+    sizes    = ch_sizes.values.tolist()
+
+    # greedy bin-packing: assign each channel to the smallest fold so far
+    fold_channels = [[] for _ in range(n_splits)]
+    fold_sizes    = [0] * n_splits
+
+    for ch, sz in zip(channels, sizes):
+        smallest = int(np.argmin(fold_sizes))
+        fold_channels[smallest].append(ch)
+        fold_sizes[smallest] += sz
+
+    print("  Fold composition:")
+    for i, (chs, sz) in enumerate(zip(fold_channels, fold_sizes)):
+        print(f"    fold {i+1}: {sz:3d} videos — {chs}")
+
+    idx = np.arange(len(df))
+    ch_arr = df["channelName"].values
+    folds = []
+    for val_channels in fold_channels:
+        val_mask = np.isin(ch_arr, val_channels)
+        folds.append((idx[~val_mask], idx[val_mask]))
+    return folds
 
 
 def cv_score(model, X, y, folds):
@@ -137,7 +165,8 @@ def main():
         r2 = spearman(llm[:, i], df["brand_memorability"].values)
         print(f"  {k:25s}  {r1:+.3f}     {r2:+.3f}")
 
-    folds = channel_kfold(df)
+    # folds = channel_kfold(df)
+    folds = channel_stratified_kfold(df)
 
     combos = {
         "meta_only"      : meta,

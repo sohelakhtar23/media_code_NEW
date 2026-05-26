@@ -1,0 +1,36 @@
+>>  python train_with_llm_score.py --csv  devset_videolist_GT.csv --feat features/ --llm  llm_scalar_cache_v2.json
+
+Spearman ρ — LLM scalars vs targets:
+  dimension                  ρ_video   ρ_brand
+  emotional_valence          +0.132     +0.068
+  human_presence             +0.144     +0.094
+  message_simplicity         +0.121     +0.100
+  novelty_surprise           +0.154     +0.089
+  narrative_arc              +0.140     +0.106
+  brand_prominence           -0.108     +0.049
+  repetition_hooks           +0.083     +0.091
+  direct_memorability        +0.153     +0.118
+  Fold composition:
+    fold 1:  79 videos — ['Goldman Sachs']
+    fold 2:  65 videos — ['UBS', 'Legal & General', 'Blackstone', 'Aon Assessment Solutions', 'Baillie Gifford UK', 'Santander Asset Management UK', 'M&G Investments']
+    fold 3:  65 videos — ['jpmorgan', 'Legal & General Investment Management - LGIM', 'Invesco', 'Life at Capital Group', 'T. Rowe Price', 'Aviva UK', 'Baillie Gifford']
+    fold 4:  65 videos — ['Aon', 'Allianz', 'HSBC UK', 'BMO Global Asset Management - EMEA', 'BNP Paribas', 'Aegon', 'BNP Paribas Leasing Solutions UK', 'AXA Investment Managers']
+    fold 5:  65 videos — ['Credit Suisse', 'Vanguard', 'Janus Henderson Investment Trusts', 'Amundi', 'Aviva', 'Columbia Threadneedle Investments EMEA APAC', 'Natixis Investment Managers US', 'State Street Global Advisors', 'Capital Group']
+
+═══════════════════════════════════════════════════════
+  TARGET: memorability_score
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.1926
+  llm_only              best CV ρ = 0.1418
+  meta+face             best CV ρ = 0.2412
+  meta+llm              best CV ρ = 0.2613
+  meta+face+llm         best CV ρ = 0.2729
+
+═══════════════════════════════════════════════════════
+  TARGET: brand_memorability
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.2114
+  llm_only              best CV ρ = 0.0199
+  meta+face             best CV ρ = 0.2199
+  meta+llm              best CV ρ = 0.2018
+  meta+face+llm         best CV ρ = 0.2090
