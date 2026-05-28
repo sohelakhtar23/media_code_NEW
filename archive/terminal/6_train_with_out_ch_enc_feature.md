@@ -1,0 +1,60 @@
+>>  python train_with_ch_encoding_feature.py --csv  devset_videolist_GT.csv --feat features/ --llm  llm_scalar_cache_v2.json
+
+## here we r using the channel encoding `feat["channel_mem_enc"]`, `feat["channel_brand_enc"]` as feature but that is not available for the test set and there are zero channel overlap between train and test set -- so useless
+## The numbers (0.27 / 0.22) here are illusions — the model is memorizing channel identity, not learning anything about video content.
+
+Spearman ρ — LLM scalars vs targets:
+  dimension                  ρ_video   ρ_brand
+  emotional_valence          +0.132     +0.068
+  human_presence             +0.144     +0.094
+  message_simplicity         +0.121     +0.100
+  novelty_surprise           +0.154     +0.089
+  narrative_arc              +0.140     +0.106
+  brand_prominence           -0.108     +0.049
+  repetition_hooks           +0.083     +0.091
+  direct_memorability        +0.153     +0.118
+  Fold composition:
+    fold 1:  79 videos — ['Goldman Sachs']
+    fold 2:  65 videos — ['UBS', 'Legal & General', 'Blackstone', 'Aon Assessment Solutions', 'Baillie Gifford UK', 'Santander Asset Management UK', 'M&G Investments']
+    fold 3:  65 videos — ['jpmorgan', 'Legal & General Investment Management - LGIM', 'Invesco', 'Life at Capital Group', 'T. Rowe Price', 'Aviva UK', 'Baillie Gifford']
+    fold 4:  65 videos — ['Aon', 'Allianz', 'HSBC UK', 'BMO Global Asset Management - EMEA', 'BNP Paribas', 'Aegon', 'BNP Paribas Leasing Solutions UK', 'AXA Investment Managers']
+    fold 5:  65 videos — ['Credit Suisse', 'Vanguard', 'Janus Henderson Investment Trusts', 'Amundi', 'Aviva', 'Columbia Threadneedle Investments EMEA APAC', 'Natixis Investment Managers US', 'State Street Global Advisors', 'Capital Group']
+
+═══════════════════════════════════════════════════════
+  TARGET: memorability_score
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.1926, model: Ridge
+  llm_only              best CV ρ = 0.1418, model: Ridge
+  meta+face             best CV ρ = 0.2412, model: Ridge
+  meta+llm              best CV ρ = 0.2613, model: Ridge
+  meta+face+llm         best CV ρ = 0.2729, model: Ridge
+
+═══════════════════════════════════════════════════════
+  TARGET: brand_memorability
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.2114, model: XGBRegressor
+  llm_only              best CV ρ = 0.0199, model: Ridge
+  meta+face             best CV ρ = 0.2199, model: XGBRegressor
+  meta+llm              best CV ρ = 0.2018, model: XGBRegressor
+  meta+face+llm         best CV ρ = 0.2090, model: XGBRegressor
+
+
+
+## train_without_ch_encoding
+═══════════════════════════════════════════════════════
+  TARGET: memorability_score
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.0168, model: XGBRegressor
+  llm_only              best CV ρ = 0.1418, model: Ridge
+  meta+face             best CV ρ = 0.0423, model: Ridge
+  meta+llm              best CV ρ = 0.0672, model: XGBRegressor
+  meta+face+llm         best CV ρ = 0.0728, model: Ridge
+
+═══════════════════════════════════════════════════════
+  TARGET: brand_memorability
+═══════════════════════════════════════════════════════
+  meta_only             best CV ρ = 0.0200, model: XGBRegressor
+  llm_only              best CV ρ = 0.0199, model: Ridge
+  meta+face             best CV ρ = 0.0238, model: SVR
+  meta+llm              best CV ρ = 0.0257, model: SVR
+  meta+face+llm         best CV ρ = 0.0198, model: XGBRegressor

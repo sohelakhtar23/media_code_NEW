@@ -1,0 +1,852 @@
+{
+  "f-d-qPmmEl0": {
+    "emotional_valence": 6.0,
+    "human_presence": 7.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 5.0
+  },
+  "Ex41SlPPVms": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "gW1TTLuquuw": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "NrKJkWOrciw": {
+    "emotional_valence": 4.0,
+    "human_presence": 1.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 3.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "eIG6yixNUDg": {
+    "emotional_valence": 7.0,
+    "human_presence": 8.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "_HaSVQSRwVI": {
+    "emotional_valence": 4.0,
+    "human_presence": 3.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "IpoNLcMo130": {
+    "emotional_valence": 2.0,
+    "human_presence": 0.0,
+    "message_simplicity": 1.0,
+    "novelty_surprise": 1.0,
+    "narrative_arc": 0.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 9.0,
+    "direct_memorability": 1.0
+  },
+  "MLGCHY35IqA": {
+    "emotional_valence": 5.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "MjAblRlVIV4": {
+    "emotional_valence": 7.5,
+    "human_presence": 5.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.5,
+    "brand_prominence": 8.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "XLKCBTYv79U": {
+    "emotional_valence": 8.0,
+    "human_presence": 6.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 8.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 7.0
+  },
+  "XYfG3y__Nk4": {
+    "emotional_valence": 8.0,
+    "human_presence": 9.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 7.0
+  },
+  "S5XsfgPkZBE": {
+    "emotional_valence": 8.5,
+    "human_presence": 9.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 8.0
+  },
+  "jrC9GXqTolM": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "5TgNPE133xw": {
+    "emotional_valence": 4.0,
+    "human_presence": 3.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "0C8S3rk1uxg": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 7.0
+  },
+  "clFT6Xw0rq0": {
+    "emotional_valence": 6.0,
+    "human_presence": 5.0,
+    "message_simplicity": 4.0,
+    "novelty_surprise": 3.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "Wn5wonSP6uI": {
+    "emotional_valence": 3.0,
+    "human_presence": 2.0,
+    "message_simplicity": 4.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 3.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 4.0
+  },
+  "aMA_L_dXuRs": {
+    "emotional_valence": 4.0,
+    "human_presence": 7.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 3.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "NLMJql1tSJw": {
+    "emotional_valence": 8.0,
+    "human_presence": 2.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 7.0,
+    "direct_memorability": 6.0
+  },
+  "H-dftHHxuUY": {
+    "emotional_valence": 7.0,
+    "human_presence": 8.0,
+    "message_simplicity": 9.0,
+    "novelty_surprise": 3.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 7.0
+  },
+  "PESufOQXpCY": {
+    "emotional_valence": 6.0,
+    "human_presence": 5.0,
+    "message_simplicity": 4.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "7rQYL07Dw0k": {
+    "emotional_valence": 5.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 5.0
+  },
+  "myrDq1Q6XWg": {
+    "emotional_valence": 2.0,
+    "human_presence": 0.0,
+    "message_simplicity": 4.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 1.0,
+    "direct_memorability": 4.0
+  },
+  "hzwyv8tOj74": {
+    "emotional_valence": 8.5,
+    "human_presence": 9.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "HV0PC3sxyqU": {
+    "emotional_valence": 6.0,
+    "human_presence": 7.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 5.0
+  },
+  "F9sdTo_KnLs": {
+    "emotional_valence": 9.0,
+    "human_presence": 2.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 3.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 7.0
+  },
+  "5DcFj9ygd-g": {
+    "emotional_valence": 6.5,
+    "human_presence": 5.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "2FTm-BMc-T4": {
+    "emotional_valence": 5.0,
+    "human_presence": 0.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "IW8zHyoyIEk": {
+    "emotional_valence": 5.0,
+    "human_presence": 2.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "ON0GkbEeWmc": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "i0Fn5hkDxmM": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "DclFSsTzF6g": {
+    "emotional_valence": 7.0,
+    "human_presence": 6.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "fXc1PntV4FY": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 8.0
+  },
+  "BQnw_5crCqk": {
+    "emotional_valence": 7.0,
+    "human_presence": 2.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 3.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 8.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "059Op_Fh1ac": {
+    "emotional_valence": 8.0,
+    "human_presence": 9.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 3.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 6.0
+  },
+  "BBE3iFsZ9g0": {
+    "emotional_valence": 7.5,
+    "human_presence": 6.0,
+    "message_simplicity": 6.5,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "spJV8gFSIik": {
+    "emotional_valence": 8.5,
+    "human_presence": 7.0,
+    "message_simplicity": 7.5,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "HPYR9JCRTCU": {
+    "emotional_valence": 5.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "IAFMhrXJ_OA": {
+    "emotional_valence": 6.0,
+    "human_presence": 0.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "C_4MpbDvZjI": {
+    "emotional_valence": 7.0,
+    "human_presence": 5.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "adk2eYE1SFw": {
+    "emotional_valence": 7.0,
+    "human_presence": 5.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 6.0
+  },
+  "rNKchpuCg-g": {
+    "emotional_valence": 8.0,
+    "human_presence": 2.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 6.0,
+    "direct_memorability": 7.0
+  },
+  "cTXC-MN4PGk": {
+    "emotional_valence": 4.0,
+    "human_presence": 5.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 3.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "kkhjAM1Uz4I": {
+    "emotional_valence": 6.0,
+    "human_presence": 7.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 6.0
+  },
+  "hHCYgtF9Z54": {
+    "emotional_valence": 5.0,
+    "human_presence": 0.0,
+    "message_simplicity": 4.0,
+    "novelty_surprise": 3.0,
+    "narrative_arc": 2.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 1.0,
+    "direct_memorability": 3.0
+  },
+  "doFUQ8vDSko": {
+    "emotional_valence": 4.0,
+    "human_presence": 3.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 2.0,
+    "repetition_hooks": 1.0,
+    "direct_memorability": 5.0
+  },
+  "7wC9zKp8kMw": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 8.0
+  },
+  "5OczIrSM6y0": {
+    "emotional_valence": 5.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "6KDSCFe5zlA": {
+    "emotional_valence": 8.0,
+    "human_presence": 9.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 6.0,
+    "direct_memorability": 7.0
+  },
+  "Jf_WWtci2V8": {
+    "emotional_valence": 5.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 6.0
+  },
+  "BeemzgtFXMk": {
+    "emotional_valence": 8.5,
+    "human_presence": 7.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 6.5,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.5
+  },
+  "n-G3k9QSSgY": {
+    "emotional_valence": 6.5,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "LiIyV7SklbQ": {
+    "emotional_valence": 6.0,
+    "human_presence": 5.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "2_tqQILf2Pk": {
+    "emotional_valence": 8.0,
+    "human_presence": 5.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 6.0
+  },
+  "EVMYyN4EWRo": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 8.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 7.0
+  },
+  "o9PDLaP4-Ao": {
+    "emotional_valence": 6.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 6.0
+  },
+  "J7_uPep4bJw": {
+    "emotional_valence": 8.5,
+    "human_presence": 7.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "mq04Zpj6FMY": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "UJnHd4FWWrc": {
+    "emotional_valence": 8.0,
+    "human_presence": 2.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 6.0
+  },
+  "RICpnQD1qpA": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "7kSay5gWXv0": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "wwxLOKpq9iU": {
+    "emotional_valence": 3.0,
+    "human_presence": 5.0,
+    "message_simplicity": 4.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "OUEnxWDvkZg": {
+    "emotional_valence": 5.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "T2CtVhqVCZU": {
+    "emotional_valence": 8.0,
+    "human_presence": 9.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 7.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 8.0
+  },
+  "5mLAZXG29kU": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 8.0
+  },
+  "dnDqANUWNWA": {
+    "emotional_valence": 8.0,
+    "human_presence": 0.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 0.0,
+    "direct_memorability": 6.0
+  },
+  "yiVD_5GVBh4": {
+    "emotional_valence": 7.0,
+    "human_presence": 5.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "rJ4_tvVfrcM": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 5.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 4.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 5.0
+  },
+  "bEIRB4wq3SI": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "O7UedtpzAjw": {
+    "emotional_valence": 4.0,
+    "human_presence": 0.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 5.0,
+    "repetition_hooks": 0.0,
+    "direct_memorability": 6.0
+  },
+  "xG8HMmj4rek": {
+    "emotional_valence": 8.5,
+    "human_presence": 9.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 7.5,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 4.0,
+    "direct_memorability": 7.0
+  },
+  "C11bdZ_CA5M": {
+    "emotional_valence": 7.0,
+    "human_presence": 2.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "ORxKlU8dIgo": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 7.0
+  },
+  "IaZrot5TEmY": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "Ot6b8lGpG-8": {
+    "emotional_valence": 8.0,
+    "human_presence": 6.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "E12fhcXVi2s": {
+    "emotional_valence": 8.0,
+    "human_presence": 5.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 6.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "tMHi1VP088Y": {
+    "emotional_valence": 0.0,
+    "human_presence": 0.0,
+    "message_simplicity": 0.0,
+    "novelty_surprise": 0.0,
+    "narrative_arc": 0.0,
+    "brand_prominence": 0.0,
+    "repetition_hooks": 0.0,
+    "direct_memorability": 0.0
+  },
+  "pN06NMSj3n0": {
+    "emotional_valence": 8.0,
+    "human_presence": 5.0,
+    "message_simplicity": 9.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 6.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "Mf-pGZ866Pg": {
+    "emotional_valence": 7.0,
+    "human_presence": 0.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 2.0,
+    "direct_memorability": 7.0
+  },
+  "S4r5mK72lp4": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "ubxoZqWwIJo": {
+    "emotional_valence": 9.0,
+    "human_presence": 8.0,
+    "message_simplicity": 8.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 7.0
+  },
+  "82lSinALtOE": {
+    "emotional_valence": 8.0,
+    "human_presence": 7.0,
+    "message_simplicity": 6.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 5.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "ACIavgaYwJs": {
+    "emotional_valence": 8.0,
+    "human_presence": 2.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 4.0,
+    "narrative_arc": 3.0,
+    "brand_prominence": 6.0,
+    "repetition_hooks": 5.0,
+    "direct_memorability": 6.0
+  },
+  "BXsmJs2HHaU": {
+    "emotional_valence": 8.0,
+    "human_presence": 6.0,
+    "message_simplicity": 7.0,
+    "novelty_surprise": 5.0,
+    "narrative_arc": 4.0,
+    "brand_prominence": 7.0,
+    "repetition_hooks": 3.0,
+    "direct_memorability": 6.0
+  },
+  "W4YdCpCEPjU": {
+    "emotional_valence": 8.0,
+    "human_presence": 0.0,
+    "message_simplicity": 9.0,
+    "novelty_surprise": 2.0,
+    "narrative_arc": 0.0,
+    "brand_prominence": 10.0,
+    "repetition_hooks": 0.0,
+    "direct_memorability": 7.0
+  }
+}

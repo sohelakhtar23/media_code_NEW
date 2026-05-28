@@ -1,0 +1,17 @@
+>> python tune_stt_length.py   --csv devset_videolist_GT.csv   --stt devset-stt/   --feat features/   --llm llm_scalar_cache_v2.json
+
+STT word counts — min=0  median=574  mean=1529  max=15613
+Videos with <130 words: 50/339
+
+max_words     ρ_video   ρ_brand
+-----------------------------------
+full          0.2697 ★   0.1801 ★
+1000          0.1663     0.0740
+600           0.1528     0.0300
+400           0.1945     0.0133
+200           0.2028     0.0176
+130           0.0973     0.0112
+75            0.1943     -0.0390
+
+  ★ Best video : max_words=None  ρ=0.2697
+  ★ Best brand : max_words=None  ρ=0.1801

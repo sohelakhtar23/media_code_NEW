@@ -8,3 +8,5 @@ devset-stt/
 thumbnails/*/
 
 frames/
+
+predict/testset-stt/

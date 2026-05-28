@@ -2,7 +2,7 @@
 Integrate LLM semantic scalars into training.
 
 Usage:
-    python train_with_llm_score.py 
+    python train_with_ch_encoding_feature.py 
     --csv  devset_videolist_GT.csv --feat features/ 
     --llm  llm_scalar_cache_v2.json
 """
@@ -55,6 +55,8 @@ def load_llm_features(df, llm_path):
 
 
 def build_meta(df):
+    ch_mem   = df.groupby("channelName")["memorability_score"].mean()
+    ch_brand = df.groupby("channelName")["brand_memorability"].mean()
     feat = pd.DataFrame()
     feat["log_views"]         = np.log1p(df["viewsCount"])
     feat["log_likes"]         = np.log1p(df["likesCount"])
@@ -65,6 +67,8 @@ def build_meta(df):
     feat["log_duration"]      = np.log1p(df["durationSeconds"])
     feat["is_long"]           = (df["durationSeconds"] > 60).astype(float)
     feat["nb_annotations"]    = df["nb_annotations"]
+    feat["channel_mem_enc"]   = df["channelName"].map(ch_mem).fillna(ch_mem.mean())
+    feat["channel_brand_enc"] = df["channelName"].map(ch_brand).fillna(ch_brand.mean())
     return feat.values.astype(np.float32)
 
 
