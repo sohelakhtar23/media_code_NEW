@@ -130,6 +130,16 @@ CV strategy: **Channel-stratified GroupKFold** — greedy bin-packing by channel
 | `train_with_llm_score.py` | Current best training script — tunes Ridge/SVR/XGBoost across feature combos with channel-stratified CV |
 | `eda.py` | Exploratory data analysis — score distributions, channel stats, metadata correlations |
 
+---
+
+## Downloaded Video Stats:
+I tried downloading the videos from their youtube link provided in the csv file. Not all videos are accessible as some videos have been made private in Youtube. Below is the video status.
+
+| Set | Available | Unavailable|
+| -------- | ------- | ------- |
+| Train | 213 | 126 | 
+| Test  | 25  | 60 |
+
 
 
 

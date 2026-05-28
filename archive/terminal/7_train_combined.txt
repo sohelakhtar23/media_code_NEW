@@ -1,0 +1,40 @@
+>> python train_combined.py --csv   devset_videolist_GT.csv --stt   devset-stt/ --feat  features/ --llm   llm_scalar_cache_v2.json
+
+Scanning LSA dimensions...
+n_comp        Mem ρ  Brand ρ
+50           0.1702   0.1609
+80           0.1835   0.0579
+100          0.1859   0.1729
+120          0.1141   0.1008
+150          0.2018   0.0386
+200          0.1006   0.0871
+
+Best LSA dims — video: 150, brand: 100
+
+═══════════════════════════════════════════════════════
+  TARGET: memorability_score
+═══════════════════════════════════════════════════════
+  lsa_rank_aggregate              ρ = 0.2018  (rank agg)
+  lsa_only                        ρ = 0.0869  (XGBRegressor)
+  llm_only                        ρ = 0.1418  (Ridge)
+  engagement_only                 ρ = 0.0423  (XGBRegressor)
+  lsa+llm                         ρ = 0.0974  (XGBRegressor)
+  lsa+face                        ρ = 0.1004  (XGBRegressor)
+  llm+face                        ρ = 0.1372  (Ridge)
+  lsa+llm+face                    ρ = 0.1052  (XGBRegressor)
+  lsa+llm+engagement              ρ = 0.0808  (SVR)
+  lsa+llm+face+engagement         ρ = 0.0938  (Ridge)
+
+═══════════════════════════════════════════════════════
+  TARGET: brand_memorability
+═══════════════════════════════════════════════════════
+  lsa_rank_aggregate              ρ = 0.1729  (rank agg)
+  lsa_only                        ρ = 0.0190  (Ridge)
+  llm_only                        ρ = 0.0199  (Ridge)
+  engagement_only                 ρ = 0.1060  (SVR)
+  lsa+llm                         ρ = 0.0275  (Ridge)
+  lsa+face                        ρ = 0.0195  (Ridge)
+  llm+face                        ρ = 0.0154  (Ridge)
+  lsa+llm+face                    ρ = 0.0268  (Ridge)
+  lsa+llm+engagement              ρ = 0.0175  (Ridge)
+  lsa+llm+face+engagement         ρ = 0.0140  (Ridge)

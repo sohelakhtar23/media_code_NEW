@@ -1,0 +1,10 @@
+brightness_mean
+brightness_std
+saturation_mean
+saturation_std
+colorfulness_mean
+colorfulness_std
+face_rate
+motion_mean
+motion_std
+shot_cut_rate

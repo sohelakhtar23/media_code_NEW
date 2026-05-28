@@ -1,0 +1,23 @@
+python train_rank.py --csv   devset_videolist_GT.csv --stt   devset-stt/ --feat  features/ --llm   llm_scalar_cache_v2.json
+
+═════════════════════════════════════════════
+  TARGET: memorability_score
+═════════════════════════════════════════════
+  lsa                   ρ = 0.2018
+  llm                   ρ = 0.2060
+  face                  ρ = 0.1166
+  lsa+llm               ρ = 0.2674
+  lsa+face              ρ = 0.1881
+  llm+face              ρ = 0.2222
+  lsa+llm+face          ρ = 0.2602
+
+═════════════════════════════════════════════
+  TARGET: brand_memorability
+═════════════════════════════════════════════
+  lsa                   ρ = 0.1729
+  llm                   ρ = 0.1054
+  face                  ρ = 0.1100
+  lsa+llm               ρ = 0.1661
+  lsa+face              ρ = 0.1428
+  llm+face              ρ = 0.1283
+  lsa+llm+face          ρ = 0.1546

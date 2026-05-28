@@ -1,4 +1,4 @@
->>  python train_with_llm_score.py --csv  devset_videolist_GT.csv --feat features/ --llm  llm_scalar_cache_v2.json
+>> python train_with_llm_score.py --csv  devset_videolist_GT.csv --feat features/ --llm  llm_scalar_cache_v2.json
 
 Spearman ρ — LLM scalars vs targets:
   dimension                  ρ_video   ρ_brand
@@ -20,17 +20,17 @@ Spearman ρ — LLM scalars vs targets:
 ═══════════════════════════════════════════════════════
   TARGET: memorability_score
 ═══════════════════════════════════════════════════════
-  meta_only             best CV ρ = 0.1926
-  llm_only              best CV ρ = 0.1418
-  meta+face             best CV ρ = 0.2412
-  meta+llm              best CV ρ = 0.2613
-  meta+face+llm         best CV ρ = 0.2729
+  meta_only             best CV ρ = 0.0168, model: XGBRegressor
+  llm_only              best CV ρ = 0.1418, model: Ridge
+  meta+face             best CV ρ = 0.0423, model: Ridge
+  meta+llm              best CV ρ = 0.0672, model: XGBRegressor
+  meta+face+llm         best CV ρ = 0.0728, model: Ridge
 
 ═══════════════════════════════════════════════════════
   TARGET: brand_memorability
 ═══════════════════════════════════════════════════════
-  meta_only             best CV ρ = 0.2114
-  llm_only              best CV ρ = 0.0199
-  meta+face             best CV ρ = 0.2199
-  meta+llm              best CV ρ = 0.2018
-  meta+face+llm         best CV ρ = 0.2090
+  meta_only             best CV ρ = 0.0200, model: XGBRegressor
+  llm_only              best CV ρ = 0.0199, model: Ridge
+  meta+face             best CV ρ = 0.0238, model: SVR
+  meta+llm              best CV ρ = 0.0257, model: SVR
+  meta+face+llm         best CV ρ = 0.0198, model: XGBRegressor

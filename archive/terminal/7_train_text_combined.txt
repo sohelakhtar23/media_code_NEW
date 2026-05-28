@@ -1,0 +1,27 @@
+python train_text_combined.py   --csv devset_videolist_GT.csv   --stt devset-stt/   --feat features/   --llm llm_scalar_cache_v2.json
+
+══════════════════════════════════════════════════
+  TARGET: memorability_score
+══════════════════════════════════════════════════
+  (n_comp=50, threshold=0.07, llm=True)
+
+  stt              ρ = 0.2697 ★
+  title+desc       ρ = 0.0456
+  title+stt        ρ = 0.2591
+  desc+stt         ρ = 0.2642
+  all              ρ = 0.2513
+
+  Best corpus: stt  ρ = 0.2697
+
+══════════════════════════════════════════════════
+  TARGET: brand_memorability
+══════════════════════════════════════════════════
+  (n_comp=100, threshold=0.01, llm=False)
+
+  stt              ρ = 0.1801 ★
+  title+desc       ρ = 0.0620
+  title+stt        ρ = 0.0343
+  desc+stt         ρ = -0.0857
+  all              ρ = -0.0501
+
+  Best corpus: stt  ρ = 0.1801
