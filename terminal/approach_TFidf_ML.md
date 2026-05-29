@@ -1,39 +1,3 @@
-`nb_annotations` not available for test_set.
-
--KWhDWsIhWk: it is an example from train set.
-videos name starting with minus(-) as in the example shown above are also downloaded.
-
-In windows while searching such files in the explorer do not give result but actually those files are there.
-
-
-## Thumbnails Stats:
-
-| Set | Available | Unavailable|
-| -------- | ------- | ------- |
-| Train | 213 | 126 | 
-| Test  | 25  | 60 |
-
-
-Thumbnail Unavilable implies Video Unavilable.
-Each downloaded thumbnail image size is 480 x 360.
-
-## Downloaded Video Stats:
-I tried downloading the videos from their youtube link provided in the csv file. Not all videos are accessible as some videos have been made private in Youtube. Below is the video status.
-
-| Set | Available | Unavailable|
-| -------- | ------- | ------- |
-| Train | 213 | 126 | 
-| Test  | 25  | 60 |
-
-## For Unavilable videos
-To get the thumbnails of Unavailable videos, For now I used `Videos Dataset` provided by Rukiye hoca, the videos aren't provided by the Organizers yet but for now I'm using them.
-
-Each videos are of different length. Right now I just selected from myself a particular frame as a thumbnail i.e. 5th second(time) for now. That can be changed later on as wished. And all the Frames for the unavailable videos which are generated from the actual videos are also of size 480 * 360. 
-
-For video `ZwkM_C_y_Pc`, duration = 7s
-
-
-
 ## TF-IDF approach
 
 `python approach_tfidf.py   --mode train   --train-csv devset_videolist_GT.csv   --stt       devset-stt/   --llm llm_scalar_cache_v2.json`                                                                                                               
@@ -76,5 +40,3 @@ Feature matrix: (339, 12)  (3d engagement + 8d LLM + 1d face_rate)
   brand_memorability  CV ρ=0.0800
 
 Saved → predict\predictions_ml.csv
-
-
