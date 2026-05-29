@@ -1,0 +1,164 @@
+>> python evaluate_audio_feature.py
+
+[INFO] Training set: 339 videos
+[INFO] Extracting audio features from audio directory ...
+...
+[INFO] Extracted 339 / 339 videos (0 missing WAV). Cached → features\audio_features.json
+[INFO] Videos with audio features + labels: 339
+[INFO] Feature matrix: 339 samples × 77 features
+
+============================================================
+TARGET: memorability_score
+============================================================
+
+  Top-15 individual correlations with memorability_score:
+    chroma11_mean                       -0.1589  ████
+    rms_std                             -0.1468  ████
+    spec_contrast_mean                  +0.1319  ███
+    chroma10_mean                       -0.1176  ███
+    chroma0_mean                        -0.1143  ███
+    chroma5_std                         +0.1123  ███
+    rms_mean                            -0.1099  ███
+    rms_max                             -0.1079  ███
+    chroma6_mean                        -0.0965  ██
+    chroma1_mean                        -0.0888  ██
+    chroma8_mean                        -0.0849  ██
+    chroma11_std                        -0.0833  ██
+    chroma_entropy                      -0.0831  ██
+    mfcc6_mean                          +0.0765  ██
+    rms_db_mean                         -0.0753  ██
+
+  [Ridge regression — all audio features]
+
+  alpha=10:
+    Fold 1: ρ = 0.0961  (n_val=79)
+    Fold 2: ρ = 0.0600  (n_val=65)
+    Fold 3: ρ = 0.1247  (n_val=65)
+    Fold 4: ρ = 0.0905  (n_val=65)
+    Fold 5: ρ = 0.1203  (n_val=65)
+  → Ridge(α=10) | memorability_score: mean ρ = 0.0983
+
+  alpha=100:
+    Fold 1: ρ = 0.1491  (n_val=79)
+    Fold 2: ρ = 0.0565  (n_val=65)
+    Fold 3: ρ = 0.1729  (n_val=65)
+    Fold 4: ρ = 0.1051  (n_val=65)
+    Fold 5: ρ = 0.0542  (n_val=65)
+  → Ridge(α=100) | memorability_score: mean ρ = 0.1075
+
+  alpha=500:
+    Fold 1: ρ = 0.1825  (n_val=79)
+    Fold 2: ρ = 0.0028  (n_val=65)
+    Fold 3: ρ = 0.1475  (n_val=65)
+    Fold 4: ρ = 0.1283  (n_val=65)
+    Fold 5: ρ = -0.0023  (n_val=65)
+  → Ridge(α=500) | memorability_score: mean ρ = 0.0918
+
+  [SVR — all audio features]
+
+  C=0.1:
+    Fold 1: ρ = 0.0278  (n_val=79)
+    Fold 2: ρ = 0.0124  (n_val=65)
+    Fold 3: ρ = 0.3873  (n_val=65)
+    Fold 4: ρ = 0.0803  (n_val=65)
+    Fold 5: ρ = 0.0220  (n_val=65)
+  → SVR(C=0.1) | memorability_score: mean ρ = 0.1060
+
+  C=0.5:
+    Fold 1: ρ = 0.0308  (n_val=79)
+    Fold 2: ρ = -0.0825  (n_val=65)
+    Fold 3: ρ = 0.2537  (n_val=65)
+    Fold 4: ρ = 0.1077  (n_val=65)
+    Fold 5: ρ = 0.0756  (n_val=65)
+  → SVR(C=0.5) | memorability_score: mean ρ = 0.0771
+
+  C=1.0:
+    Fold 1: ρ = 0.0518  (n_val=79)
+    Fold 2: ρ = -0.0525  (n_val=65)
+    Fold 3: ρ = 0.2884  (n_val=65)
+    Fold 4: ρ = 0.0620  (n_val=65)
+    Fold 5: ρ = 0.0686  (n_val=65)
+  → SVR(C=1.0) | memorability_score: mean ρ = 0.0837
+
+============================================================
+TARGET: brand_memorability
+============================================================
+
+  Top-15 individual correlations with brand_memorability:
+    chroma6_mean                        -0.1261  ███
+    chroma8_mean                        -0.1226  ███
+    mfcc6_std                           -0.1217  ███
+    chroma1_mean                        -0.1099  ███
+    spec_contrast_mean                  +0.1053  ███
+    rms_std                             -0.1014  ███
+    avg_silence_run                     -0.1002  ███
+    chroma11_mean                       -0.0949  ██
+    chroma3_mean                        -0.0882  ██
+    chroma2_mean                        -0.0864  ██
+    dynamic_range                       +0.0862  ██
+    tempo                               +0.0850  ██
+    mfcc1_std                           -0.0817  ██
+    chroma8_std                         -0.0814  ██
+    mfcc8_std                           -0.0783  ██
+
+  [Ridge regression — all audio features]
+
+  alpha=10:
+    Fold 1: ρ = -0.0840  (n_val=79)
+    Fold 2: ρ = 0.0364  (n_val=65)
+    Fold 3: ρ = 0.0389  (n_val=65)
+    Fold 4: ρ = 0.0225  (n_val=65)
+    Fold 5: ρ = -0.0362  (n_val=65)
+  → Ridge(α=10) | brand_memorability: mean ρ = -0.0045
+
+  alpha=100:
+    Fold 1: ρ = -0.0730  (n_val=79)
+    Fold 2: ρ = -0.0243  (n_val=65)
+    Fold 3: ρ = 0.1301  (n_val=65)
+    Fold 4: ρ = 0.0662  (n_val=65)
+    Fold 5: ρ = -0.0797  (n_val=65)
+  → Ridge(α=100) | brand_memorability: mean ρ = 0.0039
+
+  alpha=500:
+    Fold 1: ρ = -0.0777  (n_val=79)
+    Fold 2: ρ = -0.0925  (n_val=65)
+    Fold 3: ρ = 0.1410  (n_val=65)
+    Fold 4: ρ = 0.1047  (n_val=65)
+    Fold 5: ρ = -0.0894  (n_val=65)
+  → Ridge(α=500) | brand_memorability: mean ρ = -0.0028
+
+  [SVR — all audio features]
+
+  C=0.1:
+    Fold 1: ρ = -0.0665  (n_val=79)
+    Fold 2: ρ = 0.0317  (n_val=65)
+    Fold 3: ρ = 0.1928  (n_val=65)
+    Fold 4: ρ = 0.0253  (n_val=65)
+    Fold 5: ρ = -0.1095  (n_val=65)
+  → SVR(C=0.1) | brand_memorability: mean ρ = 0.0147
+
+  C=0.5:
+    Fold 1: ρ = -0.1320  (n_val=79)
+    Fold 2: ρ = 0.0351  (n_val=65)
+    Fold 3: ρ = 0.2444  (n_val=65)
+    Fold 4: ρ = -0.0639  (n_val=65)
+    Fold 5: ρ = -0.1446  (n_val=65)
+  → SVR(C=0.5) | brand_memorability: mean ρ = -0.0122
+
+  C=1.0:
+    Fold 1: ρ = -0.0885  (n_val=79)
+    Fold 2: ρ = 0.0009  (n_val=65)
+    Fold 3: ρ = 0.2845  (n_val=65)
+    Fold 4: ρ = -0.0824  (n_val=65)
+    Fold 5: ρ = -0.2022  (n_val=65)
+  → SVR(C=1.0) | brand_memorability: mean ρ = -0.0175
+
+============================================================
+SUMMARY — Best CV ρ per target
+============================================================
+  memorability_score           best=0.1075  (ridge_100)
+  brand_memorability           best=0.0147  (svr_0.1)
+
+  [Reference] TF-IDF best:
+  memorability_score       ρ = 0.2697
+  brand_memorability       ρ = 0.1801

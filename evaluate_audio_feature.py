@@ -18,8 +18,8 @@ Evaluation: Spearman ρ per target, printed per fold and overall.
 
 Usage:
     pip install librosa soundfile scikit-learn scipy pandas numpy
-    python approach_audio.py
-    python approach_audio.py --audio_dir audio --train_csv devset_videolist_GT.csv
+    python evaluate_audio_feature.py
+    python evaluate_audio_feature.py --audio_dir audio --train_csv devset_videolist_GT.csv
 """
 
 import os
@@ -149,7 +149,7 @@ def rhythm_features(y: np.ndarray, sr: int) -> dict:
     onset_rate   = len(onset_frames) / max(duration_s, 1)
 
     return {
-        "tempo":         float(tempo),
+        "tempo":         float(np.asarray(tempo).item()),
         "beat_strength": float(onset_env[beats].mean()) if len(beats) > 0 else 0.0,
         "onset_rate":    float(onset_rate),
     }
@@ -318,7 +318,7 @@ def main():
             cached = json.load(f)
         feat_list = list(cached.values())
     else:
-        print(f"[INFO] Extracting audio features from {audio_dir} ...")
+        print(f"[INFO] Extracting audio features from {audio_dir} directory ...")
         cache_path.parent.mkdir(parents=True, exist_ok=True)
         feat_list = []
         cached    = {}
@@ -343,8 +343,7 @@ def main():
             cached[vid_id] = feats
             print(f"OK ({feats['audio_duration_s']:.1f}s)")
 
-        with open(cache_path, "w") as f:
-            json.dump(cached, f)
+        cache_path.write_text(json.dumps(cached, indent=2))
         print(f"\n[INFO] Extracted {len(feat_list)} / {len(df)} videos "
               f"({missing} missing WAV). Cached → {cache_path}")
 
@@ -391,9 +390,8 @@ def main():
 
         # Filter features with |ρ| > threshold for model input
         THRESHOLD = 0.05
-        top_feat_idx = [i for i, (_, r) in enumerate(
-            sorted(enumerate(corrs), key=lambda x: abs(x[1][1]), reverse=True)
-        ) if abs(r) > THRESHOLD]
+        sorted_corrs = sorted(enumerate(corrs), key=lambda x: abs(x[1][1]), reverse=True)
+        top_feat_idx = [orig_idx for orig_idx, (_, rho) in sorted_corrs if abs(rho) > THRESHOLD]
 
         if len(top_feat_idx) == 0:
             print(f"  [WARN] No features above threshold {THRESHOLD} — using all")

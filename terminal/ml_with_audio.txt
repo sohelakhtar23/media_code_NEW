@@ -1,0 +1,63 @@
+>> python ml_with_audio.py
+
+Feature blocks loaded:
+  engagement : 3d
+  LLM scalars: 8d
+  face_rate  : 1d
+  audio      : 75d  (75 features)
+
+========================================================================
+  TARGET: memorability_score
+========================================================================
+  Audio features above |ρ|≥0.08: 13 / 75
+    chroma11_mean                       ρ=-0.1589
+    rms_std                             ρ=-0.1468
+    spec_contrast_mean                  ρ=+0.1319
+    chroma10_mean                       ρ=-0.1176
+    chroma0_mean                        ρ=-0.1143
+    chroma5_std                         ρ=+0.1123
+    rms_mean                            ρ=-0.1099
+    rms_max                             ρ=-0.1079
+    ... (5 more)
+
+  Combo results:
+    A_baseline         | 12d (eng+llm+face)               | ρ = 0.1271  [{'m__alpha': 500}]
+    B_+audio_all       | 87d (+all audio)                 | ρ = 0.1276  [{'m__alpha': 100}]
+    C_+audio_top       | 25d (+top audio)                 | ρ = 0.1259  [{'m__alpha': 500}]
+    D_audio_only       | 75d (audio only)                 | ρ = 0.1460  [{'m__alpha': 50}]
+
+  → Best for memorability_score: D_audio_only  ρ = 0.1460
+
+========================================================================
+  TARGET: brand_memorability
+========================================================================
+  Audio features above |ρ|≥0.08: 14 / 75
+    chroma6_mean                        ρ=-0.1261
+    chroma8_mean                        ρ=-0.1226
+    mfcc6_std                           ρ=-0.1217
+    chroma1_mean                        ρ=-0.1099
+    spec_contrast_mean                  ρ=+0.1053
+    rms_std                             ρ=-0.1014
+    avg_silence_run                     ρ=-0.1002
+    chroma11_mean                       ρ=-0.0949
+    ... (6 more)
+
+  Combo results:
+    A_baseline         | 12d (eng+llm+face)               | ρ = 0.0800  [{'m__C': 0.5, 'm__epsilon': 0.1}]
+    B_+audio_all       | 87d (+all audio)                 | ρ = 0.0355  [{'m__C': 0.1, 'm__epsilon': 0.05}]
+    C_+audio_top       | 26d (+top audio)                 | ρ = 0.1116  [{'m__C': 1.0, 'm__epsilon': 0.01}]
+    D_audio_only       | 75d (audio only)                 | ρ = 0.0829  [{'m__C': 0.1, 'm__epsilon': 0.01}]
+
+  → Best for brand_memorability: C_+audio_top  ρ = 0.1116
+
+========================================================================
+SUMMARY
+========================================================================
+  Target                         A_baseline   B_+audio_all   C_+audio_top   D_audio_only
+  ---------------------------- ------------ -------------- -------------- --------------
+  memorability_score                  0.1271        0.1276        0.1259        0.1460 ◄
+  brand_memorability                  0.0800        0.0355        0.1116 ◄        0.0829
+
+  [TF-IDF rank agg baseline]
+  memorability_score           ρ = 0.2697
+  brand_memorability           ρ = 0.1801
